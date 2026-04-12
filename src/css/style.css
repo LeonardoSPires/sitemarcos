@@ -21,7 +21,7 @@ body {
 
 /* ===== HEADER ===== */
 header {
-  background: linear-gradient(rgb(0 0 0 / 33%), rgb(0 0 0 / 10%)), url('../../assets/img/imagemHeader.jpg') center/cover no-repeat;
+  background: linear-gradient(rgb(0 0 0 / 33%), rgb(0 0 0 / 10%)), url('/sitemarcos/assets/img/imagemHeader.jpg') center/cover no-repeat;
   width: 100%;
   color: #001;
   padding: 10px 10px;

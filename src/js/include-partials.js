@@ -1,4 +1,7 @@
-// Inclui header e footer automaticamente
+// Caminho base do repositório no GitHub Pages
+const BASE_PATH = '/sitemarcos/';
+
+// Função para incluir partials
 function includePartial(selector, url, callback) {
     fetch(url)
         .then(response => {
@@ -18,12 +21,8 @@ function includePartial(selector, url, callback) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Verifica se a página está dentro da pasta /pages
-    const isInPagesFolder = window.location.pathname.includes('/pages/');
 
-    const basePath = isInPagesFolder ? '../' : '';
-
-    includePartial('#header', `${basePath}src/partials/header.html`, function () {
+    includePartial('#header', `${BASE_PATH}src/partials/header.html`, function () {
         const menuToggle = document.getElementById('menu-toggle');
         const nav = document.getElementById('nav');
 
@@ -32,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 nav.classList.toggle('active');
                 menuToggle.classList.toggle('active');
 
+                // Acessibilidade
                 const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
                 menuToggle.setAttribute('aria-expanded', !expanded);
             });
@@ -47,5 +47,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    includePartial('#footer', `${basePath}src/partials/footer.html`);
+    includePartial('#footer', `${BASE_PATH}src/partials/footer.html`);
 });
