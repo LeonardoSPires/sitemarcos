@@ -1,16 +1,24 @@
-document.getElementById("form").addEventListener("submit", function(e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form");
 
-  let nome = document.querySelector("input[type='text']").value;
-  let telefone = document.querySelector("input[type='tel']").value;
-  let mensagem = document.querySelector("textarea").value;
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-  let texto = `Olá Marcos, vim pelo site.%0A%0A` +
-              `Meu nome: ${nome}%0A` +
-              `Telefone: ${telefone}%0A` +
-              `Serviço: ${mensagem}`;
+      const nome = document.querySelector("input[type='text']").value;
+      const telefone = document.querySelector("input[type='tel']").value;
+      const mensagem = document.querySelector("textarea").value;
 
-  let numero = "5521999999999"; // coloque o número aqui
+      const numero = "5521974708402";
 
-  window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
+      const texto = encodeURIComponent(
+        `Olá! Vim pelo site da MP Reformas.\n\n` +
+        `Nome: ${nome}\n` +
+        `Telefone: ${telefone}\n` +
+        `Serviço: ${mensagem}`
+      );
+
+      window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
+    });
+  }
 });

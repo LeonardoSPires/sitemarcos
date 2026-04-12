@@ -1,0 +1,30 @@
+/* Espaçamento para compensar o header fixo */
+.services {
+  padding: 120px 20px 60px;
+  text-align: center;
+}
+
+/* Grid de fotos */
+.grid-4fr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+/* Estilo das imagens */
+.grid-4fr img {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-4fr img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}

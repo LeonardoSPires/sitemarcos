@@ -3,32 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MP Reformas e Pinturas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP Reformas | Reformas, Pintura e Acabamentos</title>
+    <meta name="description" content="Reformas, pintura e acabamentos profissionais. Qualidade, confiança e preço justo. Solicite seu orçamento grátis.">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/pages/home.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>MP Reformas e Pinturas</h1>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="about.html">Sobre</a>
-            <a href="fotos.html">Fotos</a>
-            <a href="videos.html">Vídeos</a>
-            <a href="depoimentos.html">Depoimentos</a>
-        </nav>
-    </header>
+    <!-- HEADER -->
+    <header id="header"></header>
 
+    <!-- HERO -->
     <section class="hero">
-        <!-- Banner como background via CSS -->
         <div class="hero-text">
-            <h2>Reformas, Pintura e Acabamentos Profissionais</h2>
+            <h1>Reformas, Pintura e Acabamentos Profissionais</h1>
             <p>Qualidade, confiança e preço justo.</p>
             <a href="#orcamento" class="btn">Solicitar Orçamento</a>
         </div>
     </section>
 
+    <!-- SERVIÇOS -->
     <section class="services">
         <h2>Nossos Serviços</h2>
         <div class="grid">
@@ -41,13 +39,17 @@
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="cta">
         <h2>Precisa reformar ou pintar?</h2>
         <p>Peça agora seu orçamento grátis</p>
-        <a href="https://wa.me/5521999999999" class="btn">Falar no WhatsApp</a>
+        <a href="https://wa.me/5521974708402?text=Olá! Vi seu site e gostaria de solicitar um orçamento para reforma ou pintura."
+            class="btn">Falar no WhatsApp</a>
     </section>
 
+    <!-- FORMULÁRIO -->
     <section id="orcamento" class="form">
+    <div class="container">
         <h2>Solicite um orçamento</h2>
         <form id="form">
             <input type="text" placeholder="Nome" required>
@@ -55,15 +57,15 @@
             <textarea placeholder="Descreva o serviço"></textarea>
             <button type="submit">Enviar</button>
         </form>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <p>© Marcos Reformas | Rio de Janeiro</p>
-    </footer>
+    <!-- FOOTER -->
+    <div id="footer"></div>
 
-    <a href="https://wa.me/5521999999999" class="whatsapp">💬</a>
-
-    <script src="src/js/script.js"></script>
+    <!-- JS -->
+    <script src="/src/js/include-partials.js"></script>
+    <script src="/src/js/script.js"></script>
 </body>
 
 </html>
