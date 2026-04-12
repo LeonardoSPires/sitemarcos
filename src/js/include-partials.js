@@ -1,41 +1,43 @@
 // Inclui header e footer automaticamente
 function includePartial(selector, url, callback) {
     fetch(url)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erro ao carregar ${url}`);
+            }
+            return response.text();
+        })
         .then(data => {
             const element = document.querySelector(selector);
             if (element) {
                 element.innerHTML = data;
                 if (callback) callback();
-            } else {
-                console.warn(`Elemento ${selector} não encontrado.`);
             }
         })
-        .catch(error => console.error('Erro ao carregar partial:', error));
+        .catch(error => console.error(error));
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Verifica se a página está dentro da pasta /pages
+    const isInPagesFolder = window.location.pathname.includes('/pages/');
 
-    includePartial('#header', '/src/partials/header.html', function () {
+    const basePath = isInPagesFolder ? '../' : '';
+
+    includePartial('#header', `${basePath}src/partials/header.html`, function () {
         const menuToggle = document.getElementById('menu-toggle');
         const nav = document.getElementById('nav');
 
         if (menuToggle && nav) {
             menuToggle.addEventListener('click', function () {
-                // Abre/fecha o menu
                 nav.classList.toggle('active');
-
-                // Faz o hambúrguer virar um "X"
                 menuToggle.classList.toggle('active');
 
-                // Acessibilidade
                 const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
                 menuToggle.setAttribute('aria-expanded', !expanded);
             });
 
             // Fecha o menu ao clicar em um link
-            const links = nav.querySelectorAll('a');
-            links.forEach(link => {
+            nav.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     nav.classList.remove('active');
                     menuToggle.classList.remove('active');
@@ -45,5 +47,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    includePartial('#footer', '/src/partials/footer.html');
+    includePartial('#footer', `${basePath}src/partials/footer.html`);
 });
