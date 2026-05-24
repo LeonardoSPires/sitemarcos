@@ -1,5 +1,5 @@
-// Caminho base do repositório no GitHub Pages
-const BASE_PATH = '/sitemarcos/';
+// Caminho base (vazio para local, '/sitemarcos/' para GitHub Pages)
+const BASE_PATH = '/';
 
 // Função para incluir partials
 function includePartial(selector, url, callback) {

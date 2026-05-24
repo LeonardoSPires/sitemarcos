@@ -39,7 +39,7 @@
 
 /* Efeito ao passar o mouse */
 .video-grid video:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 

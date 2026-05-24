@@ -1,4 +1,7 @@
-/* ===== RESET ===== */
+/* ===== RESET =====
+    // comando para carregar o site off: python -m http.server
+    // comando para colocar no navegador: http://localhost:8000
+*/
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +24,7 @@ body {
 
 /* ===== HEADER ===== */
 header {
-  background: linear-gradient(rgb(0 0 0 / 33%), rgb(0 0 0 / 10%)), url('/sitemarcos/assets/img/imagemHeader.jpg') center/cover no-repeat;
+  background: linear-gradient(rgb(0 0 0 / 33%), rgb(0 0 0 / 10%)), url(../../assets/img/imagemHeader.jpg) center/cover no-repeat;
   width: 100%;
   color: #001;
   padding: 10px 10px;
@@ -36,7 +39,7 @@ header {
 }
 
 header h1 {
-  font-size: 1.5em;
+  font-size: 2rem;
   font-weight: 900;
   text-shadow: 2px 2px 4px #FFF;
 }
@@ -155,6 +158,11 @@ footer h3 {
   margin-bottom: 10px;
   color: #001;
   text-shadow: 2px 2px 4px #FFF;
+}
+
+footer p {
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 4px #000;
 }
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {

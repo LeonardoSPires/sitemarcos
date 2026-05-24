@@ -8,7 +8,7 @@
 .grid-4fr {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
-  gap: 20px;
+  gap: 50px;
   justify-items: center;
   margin-top: 30px;
 }
@@ -16,8 +16,8 @@
 /* Estilo das imagens */
 .grid-4fr img {
   width: 100%;
-  max-width: 300px;
-  height: 250px;
+  max-width: 250px;
+  height: 350px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -25,6 +25,6 @@
 }
 
 .grid-4fr img:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
