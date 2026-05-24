@@ -2,6 +2,9 @@
     // comando para carregar o site off: python -m http.server
     // comando para colocar no navegador: http://localhost:8000
 */
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;

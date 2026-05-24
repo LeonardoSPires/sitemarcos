@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Smooth scroll para links com âncora
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      // Pula o link vazio
+      if (href === '#') return;
+
+      e.preventDefault();
+      const target = document.querySelector(href);
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
   const form = document.getElementById("form");
 
   if (form) {
