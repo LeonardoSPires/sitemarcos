@@ -1,7 +1,6 @@
 /* ===== HERO ===== */
 .hero {
-  background: url("../../../assets/img/backgroundNova.png
-") center/contain no-repeat;
+  background: url("../../../assets/img/banner.jpg") center/contain no-repeat;
   min-height: 850px;
   display: flex;
   align-items: center;
